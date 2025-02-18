@@ -1,0 +1,19 @@
+  <launch>
+      
+      <node pkg="limo_multi_navigation" type="tf_broadcaster"
+            args="/limo1" name="limo1_tf_broadcaster" />
+      <node pkg="limo_multi_navigation" type="tf_broadcaster"
+            args="/limo2" name="limo2_tf_broadcaster" />
+      <node pkg="limo_multi_navigation" type="tf_broadcaster"
+            args="/limo3" name="limo3_tf_broadcaster" />
+   
+      <node pkg="limo_multi_navigation" type="limo_master"
+          name="limo_master" />
+      <node pkg="limo_multi_navigation" type="limo_follow1"
+          name="limo_follow1" /> 
+    <!--<node pkg="limo_multi_navigation" type="limo_follow2"
+          name="limo_follow2" /> -->
+    <!-- <node pkg="limo_multi_navigation" type="limo_follow1_triangle"
+          name="limo_follow1_triangle" /> -->
+
+  </launch>
